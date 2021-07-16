@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="utf-8" />
+
+<title>Tablas con estilos</title>
+
+<style type="text/css">
+
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14pt;
+  border: 1px solid #333;
+  text-align: center;
+  border-collapse: collapse;
+}
+th {
+  background: #F5F5F5 ;
+  padding: 10px;
+  text-align: center;
+   
+}
+
+th.euro, th.dolar, th.libra, th.yen{
+  background: #E6F3FF;
+  padding: 5px;
+} 
+
+th, td {
+  border: 1px solid #333;
+}
+
+.par {
+  background-color:#FFFFCC;
+}
+table tr:hover {
+  background: #FFFF66;
+}
+
+</style>
+</head>
+ 
+<body>
+<table>
+
+    <tr class="cabecera">
+      <th>Cambio</th>
+      <th>Compra</th>
+      <th>Venta</th>
+      <th>M&aacute;ximo</th>
+      <th>M&iacute;nimo</th>
+    </tr>
+
+
+    <tr class="par">
+      <th class="euro">Euro/Dolar</th>
+      <td>1.2524</td>
+      <td>1.2527</td>
+      <td>1.2539</td>
+      <td>1.2488</td>
+    </tr>
+    <tr>
+      <th class="dolar">Dolar/Yen</th>
+      <td>119.01</td>
+      <td>119.05</td>
+      <td>119.82</td>
+      <td>119.82</td>
+    </tr>
+    <tr class="par">
+      <th class="libra">Libra/Dolar</th>
+      <td>1.8606</td>
+      <td>1.8611</td>
+      <td>1.8651</td>
+      <td>1.8522</td>
+    </tr>
+    <tr>
+      <th class="yen">Yen/Euro</th>
+      <td>0.6711</td>
+      <td>0.6705</td>
+      <td>0.6676</td>
+      <td>0.6713</td>
+    </tr>
+
+</table>
+
+
+
+</body>
+</html>
+
