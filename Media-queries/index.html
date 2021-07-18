@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+
+<style>
+    body {
+    color: red;
+}
+.title {
+    font-size: 6rem;
+}
+.sub-title {
+    font-size: 4rem;
+}
+
+/* Primer caso, aplica cambios a todos los elementos incluidos en la sección elegida */
+
+@media all and (max-width: 500px){
+    body {
+        color: blue;
+    }
+} 
+
+/* Segundo caso, aplica cambios solo a la vista para la impresión */
+/* Se puede obviar el "all and" y funciona igual, por eso de aca en más no lo voy a usar. */
+
+/* @media print {
+    body {
+        color: blue;
+    }
+} */
+
+/* Tercer caso, aplica cambios cuando se modifica la orientación de la pantalla (landscape). */
+/* 
+@media (orientation: landscape){
+    .title {
+        color:green;
+    }
+} */
+
+/* Cuarto caso, aplica cambios cuando se modifica la orientación de la pantalla (portrait). */
+
+/* @media (orientation: portrait){
+    .sub-title {
+        color: cyan;
+    }
+} */
+
+/* Quinto caso, aplica los cambios con dos condiciones. */
+
+/* @media (orientation: landscape) and (max-width:500px) {
+    .title {
+        color: yellow;
+    }
+} */
+
+/* Sexto caso, aplica los cambios con dos condiciones, donde la coma significa OR. */
+
+/* @media (orientation: landscape), (max-width:500px) {
+    .title {
+        color: yellow;
+    }
+    } */
+
+/* PIXELS TO REM */
+/* 10px = 0.625rem
+12px = 0.75rem
+14px = 0.875rem
+16px = 1rem (base)
+18px = 1.125rem
+20px = 1.25rem
+24px = 1.5rem
+30px = 1.875rem
+32px = 2rem */
+
+/* STANDARD FONT SIZES IN HTML
+
+h1 is   32px   (2em)
+h2 is   24px (1.5em)
+h3 is 20.8px (1.3em)
+h4 is   16px   (1em)
+h5 is 12.8px (0.8em)
+h6 is 11.2px (0.7em)
+p  is   16px   (1em)
+*/
+
+</style>
+
+</head>
+<body>
+    <h1 class="title">Title</h1>
+    <h2 class="sub-title">Sub title</h2>
+</body>
+</html>
