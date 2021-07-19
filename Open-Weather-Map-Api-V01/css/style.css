@@ -1,0 +1,31 @@
+body {
+    background-color: gray;
+    color: black;
+}
+h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+.weather-container {
+    height: 28rem;
+    width: 28rem;
+    background-color: gainsboro;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.weather-output {
+    padding: 8rem;
+}
+
+.weather {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.temp{
+    font-size: 4rem;
+    margin: 0;
+    font-weight: bold;
+}
