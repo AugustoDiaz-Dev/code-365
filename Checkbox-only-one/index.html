@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- My version based on the code at https://codepen.io/agnesb001/pen/qKZPMo -->
+    <title>Just one checkbox</title>
+    <style>
+        body {
+            background-color: greenyellow;
+            color: grey;
+        }
+
+        div {
+            text-align: center;
+            padding: 4rem;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <h3>Fruits</h3>
+        <label>
+            <input type="checkbox" class="radio" value="1" name="fooby[1][]" />Kiwi</label>
+        <label>
+            <input type="checkbox" class="radio" value="1" name="fooby[1][]" />Jackfruit</label>
+        <label>
+            <input type="checkbox" class="radio" value="1" name="fooby[1][]" />Mango</label>
+    </div>
+    <div>
+        <h3>Animals</h3>
+        <label>
+            <input type="checkbox" class="radio" value="1" name="fooby[2][]" />Tiger</label>
+        <label>
+            <input type="checkbox" class="radio" value="1" name="fooby[2][]" />Sloth</label>
+        <label>
+            <input type="checkbox" class="radio" value="1" name="fooby[2][]" />Cheetah</label>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+
+        // the selector will match all input controls of type :checkbox
+        // and attach a click event handler 
+        $("input:checkbox").on('click', function () {
+            // in the handler, 'this' refers to the box clicked on
+            var $box = $(this);
+            if ($box.is(":checked")) {
+                // the name of the box is retrieved using the .attr() method
+                // as it is assumed and expected to be immutable
+                var group = "input:checkbox[name='" + $box.attr("name") + "']";
+                // the checked state of the group/box on the other hand will change
+                // and the current value is retrieved using .prop() method
+                $(group).prop("checked", false);
+                $box.prop("checked", true);
+            } else {
+                $box.prop("checked", false);
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>
