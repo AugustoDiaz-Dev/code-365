@@ -1,0 +1,103 @@
+/* https://www.w3schools.com/css/css_grid.asp */
+/* Grid columns, grid rows, grid gaps, grid lines */
+/* You can adjust the gap size by using one of the following properties:
+
+grid-column-gap
+grid-row-gap
+grid-gap WITH THIS ONE YOU CAN HANDLE THE TWO PREVIOUS ONES*/  
+
+/* 
+grid-column-start
+grid-column-end
+grid-row-start
+grid-row-end
+*/
+body {
+    max-width: 767px;
+    margin: 0 auto;
+}
+h1 {
+    text-align: center;
+    font-size: 48px;
+}
+
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    border: 2px solid grey;
+    padding: 4px 8px;
+    font-size: 20px;
+}
+
+.grid-00 { grid-area: logo;}
+.grid-01 { grid-area: nav;}
+.grid-02 { grid-area: header;}
+.grid-03 { grid-area: menus;}
+.grid-04 { grid-area: main;}
+.grid-05 { grid-area: aside;}
+.grid-06 { grid-area: footer;}
+
+.grid-00, .grid-01, .grid-02, .grid-03, .grid-04, .grid-05, .grid-06 {
+    text-align: center;
+    border: 2px solid gray;
+    background-color: #f5f5f5;
+    font-size: 24px;
+    padding: 20px 0;
+}
+
+.grid-00, .grid-01 {
+    display: grid;
+    grid-template-rows: 20px;
+    align-items: center;
+}
+
+.grid-container {
+    display: grid; /* or inline-grid */
+    grid-template-areas:
+    'logo . . nav nav nav'
+    'menus header header header header aside'
+    'menus . . main main aside'
+    'menus footer footer footer footer footer';
+  grid-gap: 10px;
+  background-color: red;
+  padding: 5px;
+  margin-top: 80px;
+  align-items: flex-ends;
+}
+.grid-01 li {
+    display: inline-block;
+}
+
+.grid-03, ul, li{
+    border: none;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+.grid-05 {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+}
+.aside-01, .aside-02, .aside-03, .aside-04 {
+    border: 2px solid grey;
+    
+}
+.grid-05 h2 {
+    font-size: 20px;
+    padding: 0px; 
+}
+.grid-06 {
+    display: grid;
+    grid-template-columns: 150px auto auto auto auto;
+    grid-gap: 10px;
+    padding: 10px; 
+}
+.footer-01, .footer-02, .footer-03, .footer-04 {
+    border: 2px solid grey;
+}
+
+

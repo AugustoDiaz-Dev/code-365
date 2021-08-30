@@ -1,0 +1,46 @@
+#Basics of ReactJS. First Steps, Multiple Components, Index.css.
+
+With the extension "Simple React Snippets" you can create components very fast. 
+
+Use sfc to create a "Stateless Functional Component".
+
+Assign a name to that component.
+
+Create some HTML content for the component.
+
+Import that component in App.js
+
+Call the component from inside of the function App()
+
+-------------------------------------------
+
+TO START A PROJECT FOLLOW THE INSTRUCTIONS:
+
+1 Install the "Simple React Snippets" extension in VsCode.
+
+2 Go to Settings/Extensions/Emmet/Include Languages and write down: 
+
+item: javascript
+valude: javascriptreact
+
+3- Chek out you have NodeJS installed: 
+
+node -v
+
+4- Install: 
+
+npx create-react-app react-first-approach
+
+*** From outside of VsCode you can run: code . to open the program.
+
+5- Delete files App.test.js and reportWebVitals.js (also remove its import from Index.js and the last line of this file: reportWebVitals();)
+
+6- To visualize the file and its changes run:
+
+npm run start 
+
+------------------------------
+
+Note: 
+
+Remember, if you clone a React project you have to run npm install in order to get all the node_modules before start working on the project.
