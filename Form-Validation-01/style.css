@@ -1,0 +1,26 @@
+body {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+.container {
+  margin: 0 auto;
+  margin-top: 100px;
+  border: 2px solid grey;
+  padding: 10px;
+}
+label,
+input {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1em;
+}
+#error {
+  color: red;
+}
+#success {
+  color: green;
+}
+form {
+  margin: 0 auto;
+}
